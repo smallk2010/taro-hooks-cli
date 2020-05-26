@@ -11,13 +11,13 @@ import './app.scss'
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount () { }
 
-  componentDidShow () {}
+  componentDidShow () { }
 
-  componentDidHide () {}
+  componentDidHide () { }
 
-  componentDidCatchError () {}
+  componentDidCatchError () { }
 
   config = {
     pages: [
@@ -26,8 +26,9 @@ class App extends Component {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      navigationBarTitleText: '示例',
+      navigationBarTextStyle: 'black',
+      navigationStyle: 'custom'
     }
   }
 

@@ -1,11 +1,14 @@
 import { useState, useEffect } from '@tarojs/taro'
 
 const isFunction = fn => typeof fn === 'function'
-const isObject = o => typeof o === 'object'
+const isUndefined = prop => typeof prop === 'undefined'
+const isObject = o => Object.prototype.toString.call(o) === '[object Object]'
+const isArray = o => Array.isArray(o)
 const isPromise = fn => {
     if (fn instanceof Promise) return true
     return isObject(fn) && isFunction(fn.then)
 }
+
 // Model 类
 class Model {
     constructor({ initialState, actions }) {
@@ -46,3 +49,5 @@ class Model {
         })
     }
 }
+
+export default Model

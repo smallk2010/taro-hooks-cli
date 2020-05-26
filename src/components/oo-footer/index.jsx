@@ -3,19 +3,21 @@ import { View, Text } from '@tarojs/components'
 
 import './index.scss'
 
-export default OoFooter = () => {
+const OoFooter = () => {
   
   return (
-    <View className="oo-footer" >
-      footer
+    <View className="oo-header" >
+      header
     </View>
   )
 }
 
 OoFooter.config = {
-  navigationBarTitleText: 'footer'
+  navigationBarTitleText: 'header'
 }
 
 OoFooter.options = {
-    addGlobalClass: true
-  }
+  addGlobalClass: true
+}
+
+export default OoFooter

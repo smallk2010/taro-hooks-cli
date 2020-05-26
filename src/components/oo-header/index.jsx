@@ -3,7 +3,7 @@ import { View, Text } from '@tarojs/components'
 
 import './index.scss'
 
-export default OoHeader = () => {
+const OoHeader = () => {
   
   return (
     <View className="oo-header" >
@@ -17,5 +17,7 @@ OoHeader.config = {
 }
 
 OoHeader.options = {
-    addGlobalClass: true
-  }
+  addGlobalClass: true
+}
+
+export default OoHeader

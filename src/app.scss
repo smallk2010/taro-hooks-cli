@@ -1,0 +1,59 @@
+page {
+  background-color: #f4f5f6;
+  height: 100%;
+  font-size: 28px;
+}
+
+page,
+view,
+scroll-view,
+swiper,
+button,
+input,
+text,
+textarea,
+label,
+navigator,
+image,
+.placeholder {
+  box-sizing: border-box;
+  line-height: 1;
+  color: #666;
+}
+
+.placeholder {
+  color: #ccc;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:after {
+    border: none;
+    border-radius: 0;
+  }
+}

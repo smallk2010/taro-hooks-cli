@@ -80,7 +80,7 @@ const ${tmplName} = new Model({
 fs.mkdirSync(`${cwd}/src/${cmdDir}/${obj.tmplName}`);
 process.chdir(`${cwd}/src/${cmdDir}/${obj.tmplName}`);
 
-fs.writeFileSync('index.js', indexTmpl);
+fs.writeFileSync('index.jsx', indexTmpl);
 fs.writeFileSync('index.scss', scssTmpl);
 
 if (isStore) {

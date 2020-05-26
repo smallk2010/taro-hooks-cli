@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/index'
+
 import './app.scss'
 import './font.scss'
 
@@ -32,7 +33,6 @@ class App extends Component {
   componentDidHide () { }
 
   componentDidCatchError () { }
-
   globalData = {
     navHenght: 88, // 顶部菜单的高度
     ipxBottomH: 0, // IPX底部的高度

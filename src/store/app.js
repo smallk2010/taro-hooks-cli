@@ -8,7 +8,6 @@ const initialState = {
 const actions = {
     setInit (state, payload) {
         let o = Object.assign({}, { ...state, ...payload })
-        console.log(o)
         return o
     }
 }

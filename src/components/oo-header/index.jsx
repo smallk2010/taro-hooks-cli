@@ -3,11 +3,12 @@ import { View, Text } from '@tarojs/components'
 
 import './index.scss'
 
+const app = Taro.getApp()
 const OoHeader = () => {
   
   return (
     <View className="oo-header" >
-      header
+      33header{app.globalData.navHenght}
     </View>
   )
 }

@@ -27,11 +27,11 @@ if (!tmplName) {
 // 页面模版
 let indexTmpl = `import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-${isStore ? `import { useStore } from '../../store/${tmplName}'` : ''}
+${isStore ? `import ${tmplName} from '../../store/${tmplName}'` : ''}
 import './index.scss'
 
-export default ${obj.fnName} = () => {
-  ${isStore ? 'const [state, actions] = useStore()' : ''}
+const ${obj.fnName} = () => {
+  ${isStore ? `const [state, actions] = ${tmplName}.useStore()` : ''}
   return (
     <View className="${obj.cssName}" ${isStore ? 'onClick={()=> actions.setName(\'kK .\')}' : ''}>
       hello,${obj.fnName}${isStore ? '，这是来自远方的{state.name}' : ''}
@@ -49,14 +49,17 @@ if (isComp) {
   addGlobalClass: true
 }
 
-  `
+export default ${obj.fnName}
+
+`
 }
 // scss文件模版
 const scssTmpl = `@import "../../var.scss";
 .${obj.cssName} {}
 `;
 // store文件模版
-const storeTmpl = `const sleep = async t => new Promise(resolve => setTimeout(resolve, t))
+const storeTmpl = `import Model from './index'
+const sleep = async t => new Promise(resolve => setTimeout(resolve, t))
 const initialState = { name: '${tmplName}' }
 const actions = {
     async setInfo () {
@@ -70,11 +73,12 @@ const actions = {
         return Object.assign({}, { ...state, name })
     }
 }
-
 const ${tmplName} = new Model({
-    initialState,
-    actions
-})`;
+  initialState,
+  actions
+})
+export default ${tmplName}
+`;
 
 
 fs.mkdirSync(`${cwd}/src/${cmdDir}/${obj.tmplName}`);

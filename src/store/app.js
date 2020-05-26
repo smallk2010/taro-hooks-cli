@@ -16,5 +16,4 @@ const app = new Model({
     initialState,
     actions
 })
-
 export default app

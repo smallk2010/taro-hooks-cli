@@ -23,7 +23,7 @@ class App extends Component {
     let _scale = _designWidth / _system.screenWidth
     let _ipxBottomH = 34 // px
     let _navHeight = _system.statusBarHeight + 44 // px
-    this.globalData.navHenght = _scale * _navHeight // rpx
+    this.globalData.navHeight = _scale * _navHeight // rpx
     this.globalData.ipxBottomH = _isIpx ? (_scale * _ipxBottomH) : 0 // rpx
     this.globalData.statusBarHeight = _scale * _system.statusBarHeight // rpx
   }
@@ -34,7 +34,7 @@ class App extends Component {
 
   componentDidCatchError () { }
   globalData = {
-    navHenght: 88, // 顶部菜单的高度
+    navHeight: 88, // 顶部菜单的高度
     ipxBottomH: 0, // IPX底部的高度
     statusBarHeight: 40 // 状态栏的高度
   }

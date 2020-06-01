@@ -1,0 +1,63 @@
+@import "../../var.scss";
+.oo-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 42px;
+    height: 42px;
+
+    .k-ball7a,
+    .k-ball7b,
+    .k-ball7c,
+    .k-ball7d {
+        border: 0;
+        margin: 0;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        border-radius: 50%;
+        animation: loadingAni 2s ease infinite;
+    }
+
+    .k-ball7a {
+        background-color: #19a68c;
+        animation-delay: -1.5s;
+    }
+
+    .k-ball7b {
+        background-color: #f63d3a;
+        animation-delay: -1s;
+    }
+
+    .k-ball7c {
+        background-color: #fda543;
+        animation-delay: -0.5s;
+    }
+
+    .k-ball7d {
+        background-color: #193b48;
+    }
+}
+
+@keyframes loadingAni {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(160%);
+    }
+
+    50% {
+        transform: translate(160%, 160%);
+    }
+
+    75% {
+        transform: translate(0, 160%);
+    }
+}

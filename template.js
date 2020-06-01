@@ -39,20 +39,18 @@ const ${obj.fnName} = () => {
   )
 }
 
-${obj.fnName}.config = {
-  navigationBarTitleText: '${obj.fnName}'
-}
-
 `;
 if (isComp) {
   indexTmpl += `${obj.fnName}.options = {
   addGlobalClass: true
+}`
+} else {
+  indexTmpl += `${obj.fnName}.config = {
+    navigationBarTitleText: '${obj.fnName}'
+  }`
 }
+indexTmpl += `export default ${obj.fnName}`
 
-export default ${obj.fnName}
-
-`
-}
 // scss文件模版
 const scssTmpl = `@import "../../var.scss";
 .${obj.cssName} {}

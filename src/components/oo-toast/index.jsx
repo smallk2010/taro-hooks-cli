@@ -4,12 +4,11 @@ import { View } from '@tarojs/components'
 import './index.scss'
 
 const OoToast = ({ msgs = [], aniedFn }) => {
-  let aniCountRef = useRef(0)
+  const [aniCount,setCount ]= useState(0)
   const aniedEvt = () => {
-    aniCountRef.current += 1
-    if (aniCountRef.current >= msgs.length) {
-      aniedFn && aniedFn()
-    }
+    setCount(aniCount + 1)
+
+    console.log(aniCount)
   }
   return (
     <View className="oo-toast" onClick={() => aniedEvt(0)}>
